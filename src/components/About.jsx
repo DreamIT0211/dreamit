@@ -24,7 +24,7 @@ const About = () => {
           transition={{ duration: 2 }}
           className="text-center mb-12"
         >
-          <p className="mt-4 text-lg text-left text-gray-900 px-4 md:px-0 max-w-3xl mx-auto mr-16">
+          <p className="mt-4 text-lg text-justify text-gray-900 px-4 md:px-0 max-w-3xl mx-auto mr-16">
             Discover the essence of relentless innovation and transformative
             technology with <span className="text-black font-medium"> DreamITInfotech </span>. At the intersection of creativity
             and functionality, we redefine possibilities, crafting digital

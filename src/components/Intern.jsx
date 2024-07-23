@@ -86,7 +86,7 @@ const Intern = ({ onSwitch }) => {
               alt={member.name}
               className="w-32 h-32 rounded-xl  mb-4 transition duration-700 ease-in-out group-hover:scale-105"
             />
-            <p className="text-xl font-semibold text-gray-800 transition duration-500 group-hover:text-purple-400">
+            <p className="text-xl font-semibold text-center text-gray-800 transition duration-500 group-hover:text-purple-400">
               {member.name}
             </p>
             <p className="text-md font-medium text-cyan-600">{member.title}</p>

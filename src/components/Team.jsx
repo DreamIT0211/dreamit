@@ -50,7 +50,7 @@ const Team = ({ onSwitch }) => {
         "Hello from DreamITInfotech! Excited to steer our team in creating innovative solutions. Come join us on this thrilling journey of turning visions into reality.",
     },
     {
-      name: "Mr. Darpan",
+      name: "Mr. Darpan Patel",
       title: "Manager",
       image: manager,
       description:
@@ -100,7 +100,7 @@ const Team = ({ onSwitch }) => {
               {member.name}
             </p>
             <p className="text-md font-medium text-cyan-600">{member.title}</p>
-            <p className="text-center text-gray-600 mt-4">
+            <p className="text-justify text-gray-600 mt-4">
               {member.description}
             </p>
           </motion.div>
