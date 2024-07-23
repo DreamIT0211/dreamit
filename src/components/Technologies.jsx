@@ -48,7 +48,7 @@ const Technologies = () => {
   return (
     <div
       ref={sectionRef}
-      className="p-5 md:p-20 lg:pb-20 pb-[550px] bg-gray-50 flex flex-col justify-center items-center"
+      className="p-5 md:pb-20 lg:pb-28 pb-[550px] bg-gray-50 flex flex-col justify-center items-center"
     >
       <h1 className="text-2xl md:text-4xl font-bold text-gray-900">Technologies</h1>
 

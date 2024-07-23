@@ -6,6 +6,7 @@ import gtvknews from "../assets/work/gtvknews.jpg";
 import redchillez from "../assets/work/redchillez.jpg";
 import revivalpharmacy from "../assets/work/revivalpharmacy.jpg";
 import vmtdakor from "../assets/work/vmtdakor.png";
+import { useInView } from "react-intersection-observer";
 
 const ourWorks = [
   {
@@ -81,6 +82,10 @@ const itemVariants = {
 const Work = () => {
   const [selectedId, setSelectedId] = useState(null);
   const [fullScreenImage, setFullScreenImage] = useState(null);
+  const { ref: sectionRef, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
   const selectedWork = ourWorks.find((item) => item.id === selectedId);
 
   const openFullScreen = (image) => {
@@ -92,14 +97,17 @@ const Work = () => {
   };
 
   return (
-    <div className="p-10 bg-gray-50 flex flex-col justify-center items-center">
+    <div
+      ref={sectionRef}
+      className="p-10 bg-gray-50 flex flex-col justify-center items-center"
+    >
       <h1 className="text-4xl font-bold text-gray-900 mb-10">Our Work</h1>
 
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 gap-8"
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        animate={inView ? "visible" : "hidden"}
       >
         {ourWorks.map((item) => (
           <motion.div
@@ -113,7 +121,7 @@ const Work = () => {
               src={item.image}
               alt={item.title}
               onClick={(e) => {
-                e.stopPropagation(); // Prevent opening the card modal
+                e.stopPropagation();
                 openFullScreen(item.image);
               }}
               className="w-64 h-32 rounded-xl shadow-inner mb-4 transition duration-700 group-hover:scale-105 ease-in-out cursor-pointer"
@@ -143,7 +151,7 @@ const Work = () => {
                   src={selectedWork.image}
                   alt={selectedWork.title}
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent closing modal
+                    e.stopPropagation();
                     openFullScreen(selectedWork.image);
                   }}
                   className="w-64 h-32 rounded-xl shadow-inner mb-2 transition duration-700 ease-in-out cursor-pointer"
@@ -168,7 +176,7 @@ const Work = () => {
                   alt={selectedWork.title}
                   className="w-64 h-32 md:w-96 md:h-auto rounded-xl shadow-inner mb-4 md:mb-0 md:mr-8 transition duration-700 ease-in-out cursor-pointer"
                   onClick={(e) => {
-                    e.stopPropagation(); // Prevent closing modal
+                    e.stopPropagation();
                     openFullScreen(selectedWork.image);
                   }}
                 />
