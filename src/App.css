@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#root {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.app {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #29d;
+  transform-origin: 0%;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Background of the scrollbar track */
+  border-radius: 10px; /* Radius of the scrollbar track */
+}
+
+@keyframes scrollEffect {
+  0% {
+    background: rgb(0, 123, 255); /* Start color */
+  }
+  50% {
+    background: rgb(34, 161, 251); /* Mid color */
+  }
+  100% {
+    background: rgb(255, 193, 7); /* End color */
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 193, 7); /* Initial color of the scrollbar thumb */
+  border-radius: 10px; /* Radius of the scrollbar thumb */
+  transition: background 0.3s ease; /* Smooth transition for color changes */
+  animation: scrollEffect 3s infinite; /* Continuous animation */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(27, 211, 244); /* Color of the scrollbar thumb on hover */
+  transition: background 0.6s ease; /* Smooth transition for hover state */
+}
+
