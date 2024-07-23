@@ -10,6 +10,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
+import { GrTechnology } from "react-icons/gr";
 import BankDetailsModal from "./BankDetailsModal";
 
 const navLinks = [
@@ -39,7 +40,7 @@ const navStyles = {
 
 function NavList({ selectedItem, handleSelect, handleBankClick }) {
   return (
-    <ul className="mt-2 mb-2 mr-16 flex flex-col gap-6 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+    <ul className="mt-2 mb-2 mr-16 p-3 md:p-0 lg:p-0 flex flex-col gap-6 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       {navLinks.map((navLink) => {
         const isSelected = selectedItem === navLink.id;
         return (
@@ -49,7 +50,8 @@ function NavList({ selectedItem, handleSelect, handleBankClick }) {
             href={navLink.id !== "bank" ? `#${navLink.id}` : "#"}
             variant="small"
             className={`font-bold ${navStyles.navbar.text}`}
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault();
               if (navLink.id === "bank") {
                 handleBankClick();
               } else {
@@ -194,7 +196,7 @@ const StickyNavbar = () => {
           <img
             src={logo}
             alt="DreamIT"
-            className="h-[120px] w-[120px] ml-32 object-contain select-none"
+            className="h-[120px] w-[120px] ml-36 md:ml-28 lg:ml-28 object-contain select-none"
           />
           <div className="hidden lg:block">
             <NavList
@@ -209,7 +211,7 @@ const StickyNavbar = () => {
             onClick={toggleIsNavOpen}
             className={`ml-auto mr-2 lg:hidden ${navStyles.navbar.text}`}
           >
-            <Bars3BottomRightIcon className="h-6 w-6 text-cyan-600" />
+            <GrTechnology className="h-10 w-10 mt-5 mb-2 mr-2 p-2 text-cyan-400 hover:text-blue-600" />
           </IconButton>
         </div>
         <Collapse
