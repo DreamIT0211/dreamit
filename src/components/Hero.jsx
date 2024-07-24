@@ -100,7 +100,7 @@ const Hero = () => {
               className="h-[200px] sm:h-[500px] w-auto rounded-2xl mb-4 sm:mb-0 sm:mr-10"
             />
             <div className="text-white text-xl sm:text-4xl font-bold w-full sm:w-1/2 ml-4 sm:ml-10 text-center sm:text-left">
-              <span className="text-stroke-black">{displayedText}</span>
+              <span className="md:text-stroke-black lg:text-stroke-black">{displayedText}</span>
               <AnimatePresence>
                 {displayedDescription && (
                   <motion.p
