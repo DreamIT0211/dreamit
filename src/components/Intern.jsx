@@ -1,12 +1,11 @@
-// Intern Component
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Palak from "../assets/team/palak.jpg"; 
-import Shreya from "../assets/team/shreya.jpg"; 
-import Sushil from "../assets/team/susil.jpg"; 
-import Deeprajsinh from "../assets/team/zala.jpg"; 
-import Ravi from "../assets/team/ravi.jpg"; 
+import Palak from "../assets/team/palak.jpg";
+import Shreya from "../assets/team/shreya.jpg";
+import Sushil from "../assets/team/susil.jpg";
+import Deeprajsinh from "../assets/team/zala.jpg";
+import Ravi from "../assets/team/ravi.jpg";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -28,38 +27,22 @@ const item = {
   },
 };
 
-const Intern = ({ onSwitch }) => {
+const Intern = ({ onSwitch, onSwitchToTeam, onSwitchToDev }) => {
   const { ref: sectionRef, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
   });
 
   const teamMembers = [
-    {
-      name: "Ms. Palak Patel",
-      title: "Project Intern",
-      image: Palak,
-    },
-    {
-      name: "Ms. Shreya Patel",
-      title: "Project Intern",
-      image: Shreya,
-    },
-    {
-      name: "Mr Sushil Yadav",
-      title: "Project Intern",
-      image: Sushil,
-    },
+    { name: "Ms. Palak Patel", title: "Project Intern", image: Palak },
+    { name: "Ms. Shreya Patel", title: "Project Intern", image: Shreya },
+    { name: "Mr Sushil Yadav", title: "Project Intern", image: Sushil },
     {
       name: "Mr Deeprajsinh Zala",
       title: "Project Intern",
       image: Deeprajsinh,
     },
-    {
-      name: "Mr. Ravi Parmar",
-      title: "Project Intern",
-      image: Ravi,
-    },
+    { name: "Mr. Ravi Parmar", title: "Project Intern", image: Ravi },
   ];
 
   return (
@@ -84,7 +67,7 @@ const Intern = ({ onSwitch }) => {
             <img
               src={member.image}
               alt={member.name}
-              className="w-32 h-32 rounded-xl  mb-4 transition duration-700 ease-in-out group-hover:scale-105"
+              className="w-32 h-32 rounded-xl mb-4 transition duration-700 ease-in-out group-hover:scale-105"
             />
             <p className="text-xl font-semibold text-center text-gray-800 transition duration-500 group-hover:text-purple-400">
               {member.name}
@@ -93,12 +76,20 @@ const Intern = ({ onSwitch }) => {
           </motion.div>
         ))}
       </motion.div>
-      <button
-        onClick={onSwitch}
-        className="mt-10 px-4 py-2 bg-cyan-600 font-semibold text-white rounded hover:bg-cyan-500 transition duration-300"
-      >
-        Our Team
-      </button>
+      <div className="mt-10 flex space-x-4">
+        <button
+          onClick={onSwitchToTeam}
+          className="px-4 py-2 bg-cyan-600 font-semibold text-white rounded hover:bg-cyan-500 transition duration-300"
+        >
+          Our Team
+        </button>
+        <button
+          onClick={onSwitchToDev}
+          className="px-4 py-2 bg-cyan-600 font-semibold text-white rounded hover:bg-cyan-500 transition duration-300"
+        >
+          Our Developers
+        </button>
+      </div>
     </div>
   );
 };
