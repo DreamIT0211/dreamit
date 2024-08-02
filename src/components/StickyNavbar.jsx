@@ -196,7 +196,7 @@ const StickyNavbar = () => {
           <img
             src={logo}
             alt="DreamIT"
-            className="h-[120px] w-[120px] ml-36 md:ml-28 lg:ml-28 object-contain select-none"
+            className="h-[120px] w-[120px] ml-32 md:ml-28 lg:ml-28 mx-auto object-contain select-none"
           />
           <div className="hidden lg:block">
             <NavList
