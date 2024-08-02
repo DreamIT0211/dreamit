@@ -25,7 +25,7 @@ const services = [
   },
   {
     icon: <FaShoppingCart className="text-4xl text-white" />,
-    title: "eCommerce Development",
+    title: "E-Commerce Development",
     description:
       "We create robust eCommerce platforms with intuitive user interfaces and secure payment systems to enhance your online retail business. Transform your eCommerce experience with our expertise.",
   },
