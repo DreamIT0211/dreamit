@@ -49,16 +49,16 @@ const services = [
   },
   {
     icon: <FaSearch className="text-4xl text-white" />,
-    title: "Search Engine Optimization",
+    title: "SEO",
     description:
-      "Our SEO services enhance your website's visibility on search engines like Google. We utilize keyword optimization, high-quality content creation, and technical improvements to attract more organic traffic. Our goal is to improve your search engine rankings, ensuring your website reaches a wider audience.",
+      "Boost your website's visibility with our SEO services, including keyword optimization, quality content, and technical enhancements to drive organic traffic and improve rankings.",
   },
   {
     icon: <FaBullhorn className="text-4xl text-white" />,
     title: "Digital Marketing",
     description:
-      "Our Digital Marketing services leverage a variety of online channels—including content marketing, social media, PPC, email campaigns, and influencer partnerships—to promote your products and services. We engage your target audience effectively and drive conversions, all while providing detailed performance analytics to optimize your strategies.",
-  },
+      "Promote your products with our Digital Marketing services using content marketing, social media, PPC, email, and influencer partnerships to engage your audience and drive conversions.",
+  },  
   {
     icon: <FaChalkboardTeacher className="text-4xl text-white" />,
     title: "Professional Training",
