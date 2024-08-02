@@ -46,7 +46,7 @@ const Developer = ({ onSwitch, onSwitchToTeam, onSwitchToIntern }) => {
   ];
 
   return (
-    <div ref={sectionRef} className="md:p-28 lg:p-32 p-5 bg-white h-auto flex flex-col justify-center items-center">
+    <div ref={sectionRef} className="md:p-28 lg:p-16 p-5 bg-white h-auto flex flex-col justify-center items-center">
       <h1 className="text-4xl font-bold text-gray-900">Our Developers</h1>
 
       <motion.div
