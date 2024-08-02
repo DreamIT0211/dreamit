@@ -12,6 +12,8 @@ import {
   FaCode,
   FaMobileAlt,
   FaChalkboardTeacher,
+  FaSearch,
+  FaBullhorn,
 } from "react-icons/fa";
 
 const services = [
@@ -46,6 +48,18 @@ const services = [
       "We specialize in creating high-quality mobile applications that provide a superior user experience on both Android and iOS platforms. Enhance your mobile strategy with our innovative solutions.",
   },
   {
+    icon: <FaSearch className="text-4xl text-white" />,
+    title: "Search Engine Optimization",
+    description:
+      "Our SEO services enhance your website's visibility on search engines like Google. We utilize keyword optimization, high-quality content creation, and technical improvements to attract more organic traffic. Our goal is to improve your search engine rankings, ensuring your website reaches a wider audience.",
+  },
+  {
+    icon: <FaBullhorn className="text-4xl text-white" />,
+    title: "Digital Marketing",
+    description:
+      "Our Digital Marketing services leverage a variety of online channels—including content marketing, social media, PPC, email campaigns, and influencer partnerships—to promote your products and services. We engage your target audience effectively and drive conversions, all while providing detailed performance analytics to optimize your strategies.",
+  },
+  {
     icon: <FaChalkboardTeacher className="text-4xl text-white" />,
     title: "Professional Training",
     description:
@@ -56,14 +70,14 @@ const services = [
 const Services = () => {
   return (
     <>
-    <div className="flex justify-center items-center md:-mt-10 lg:-mt-10 mt-0 ">
-      <h1 className="text-center text-3xl font-bold mb-8">Our Services</h1>
-    </div>
+      <div className="flex justify-center items-center md:-mt-10 lg:-mt-10 mt-0">
+        <h1 className="text-center text-3xl font-bold mb-8">Our Services</h1>
+      </div>
       <div className="container mx-auto p-6 lg:p-12 bg-transparent">
-        <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {services.map((service) => (
             <Card
-              className="transition-all duration-700 ease-in-out border-2 border-transparent hover:border-cyan-500 hover:shadow-2xl hover:scale-105 rounded-lg max-w-sm m-2 lg:m-0 w-full md:w-1/2 lg:w-1/3 xl:w-1/4"
+              className="transition-all duration-700 ease-in-out border-2 border-transparent hover:border-cyan-500 hover:shadow-2xl hover:scale-105 rounded-lg"
               key={service.title}
             >
               <CardHeader
