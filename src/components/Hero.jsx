@@ -69,7 +69,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="relative h-[500px] w-full overflow-hidden flex flex-col sm:flex-row items-center justify-center select-none">
+      <div className="relative h-[330px] w-full overflow-hidden flex flex-col sm:flex-row items-center justify-center select-none lg:h-[500px] md:h-[500px]">
         <motion.div
           className="bg-gradient-to-r from-blue-500 to-purple-600 h-[500px] w-full sm:w-full relative z-10 flex flex-col sm:flex-row items-center"
           animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
@@ -88,7 +88,7 @@ const Hero = () => {
             transition={{ duration: 30, ease: "linear", repeat: Infinity }}
             style={{ backgroundSize: "200% 200%" }}
           ></motion.div>
-          <div className="relative z-20 w-full flex flex-col sm:flex-row items-center justify-between px-4 sm:px-10">
+          <div className="relative z-20 w-full flex flex-col sm:flex-row items-center justify-between px-4 sm:px-10 mt-4">
             <motion.img
               key={quotes[currentQuote].image}
               src={quotes[currentQuote].image}
